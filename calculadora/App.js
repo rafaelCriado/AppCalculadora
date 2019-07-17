@@ -14,7 +14,7 @@ export default class App extends Component{
     } catch (error) {
       return 'Expressão Inválida';
     }
-   }
+  }
 
   add = (n) => {
     try {
@@ -29,7 +29,7 @@ export default class App extends Component{
 
         case 'l':
             let str = this.state.v;
-            this.setState({v: str.substring(0,(str.length - 1))});
+            this.setState({v: str.replace(/.$/,'')});
             break;
 
         case '=':
